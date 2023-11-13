@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="market.css" />
+    <title>LAST MARKET DAY CALCULATOR</title>
+  </head>
+  <body style="text-align: center">
+    <div id="box">
+      <h2 id="heading">NEXT MARKET DAY CALCULATOR</h2>
+      <div>
+        <h3>Select the last day of the market</h3>
+        <select id="lastMarketDay">
+          <option value="0">Sunday</option>
+          <option value="1">Monday</option>
+          <option value="2">Tuesday</option>
+          <option value="3">Wednesday</option>
+          <option value="4">Thursday</option>
+          <option value="5">Friday</option>
+          <option value="6">Saturday</option>
+        </select>
+      </div>
+      <br />
+
+      <div>
+        <h3><span> market interval </span></h3>
+        <select id="marketInterval">
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+        </select>
+      </div>
+      <br />
+      <hr />
+
+      <div id="txtMarketDay">
+        <p id="displayLastMarket"></p>
+        <p>
+          The next market day <input type="button" value="is" id="displayNextMarket">
+          <b  id="nextMarketDay">!</b>
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="nextmarketdaycalculator.js"></script>
+</html>
