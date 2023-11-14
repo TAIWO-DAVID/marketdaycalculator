@@ -1,23 +1,8 @@
-
 var displayLastMarket = document.getElementById("displayLastMarket");
 var displayNextMarket = document.getElementById("displayNextMarket");
 var nextMarketDay = document.getElementById("nextMarketDay");
 
-// console.log("Selected market interval is ", marketInterval);
-
 // Weekdays index
-<<<<<<< HEAD
-<<<<<<< HEAD
-// var weekDaysArray = {
-//   1: "Sunday",
-//   2: "Monday",
-//   3: "Tuesday",
-//   4: "Wednesday",
-//   5: "Thursday",
-//   6: "Friday",
-//   7: "Saturday",
-// };
-
 var weekDaysArray = [
   "Sunday",
   "Monday",
@@ -27,20 +12,6 @@ var weekDaysArray = [
   "Friday",
   "Saturday",
 ];
-=======
-var weekDaysArray = {
-=======
-weekDaysArray = {
->>>>>>> parent of d5d46f9... Updated nextmarketdaycalculator.js
-  1: "Sunday",
-  2: "Monday",
-  3: "Tuesday",
-  4: "Wednesday",
-  5: "Thursday",
-  6: "Friday",
-  7: "Saturday",
-};
->>>>>>> d5d46f917961f7d2647c357cddbcd8ebf46fc262
 
 displayNextMarket.addEventListener("click", marketDayCalculation);
 // displayNextMarket.addEventListener("change", marketDayCalculation);
@@ -51,25 +22,11 @@ function marketDayCalculation() {
   var lastMarketDay = document.getElementById("lastMarketDay");
   var marketInterval = document.getElementById("marketInterval").value;
 
-
   var lastMarketDayNumber = lastMarketDay.value;
-<<<<<<< HEAD
   var selectedLastMarketDay =
     lastMarketDay.options[lastMarketDay.selectedIndex].innerText;
-  let dayIndex = (parseInt(lastMarketDayNumber) + parseInt(marketInterval)) % 7;
-=======
-  var selectedLastMarketDay = lastMarketDay.options[lastMarketDay.selectedIndex].innerText;
-<<<<<<< HEAD
   let dayIndex = (Number(lastMarketDayNumber) + Number(marketInterval) + 1) % 7;
->>>>>>> d5d46f917961f7d2647c357cddbcd8ebf46fc262
-=======
-  let dayIndex = Number(lastMarketDayNumber) + Number(marketInterval) + 1;
 
-
->>>>>>> parent of d5d46f9... Updated nextmarketdaycalculator.js
-
-  dayIndex = dayIndex % 7;
-  weekDaysArray[dayIndex];
   displayLastMarket.innerText =
     "The last market day selected is " + selectedLastMarketDay;
   console.log("The next market day is ", weekDaysArray[dayIndex]);
