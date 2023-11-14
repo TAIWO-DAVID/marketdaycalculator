@@ -25,7 +25,7 @@ function marketDayCalculation() {
   var lastMarketDayNumber = lastMarketDay.value;
   var selectedLastMarketDay =
     lastMarketDay.options[lastMarketDay.selectedIndex].innerText;
-  let dayIndex = (Number(lastMarketDayNumber) + Number(marketInterval) + 1) % 7;
+  let dayIndex = (Number(lastMarketDayNumber) + Number(marketInterval)) % 7;
 
   displayLastMarket.innerText =
     "The last market day selected is " + selectedLastMarketDay;
