@@ -1,12 +1,9 @@
-
 var displayLastMarket = document.getElementById("displayLastMarket");
 var displayNextMarket = document.getElementById("displayNextMarket");
 var nextMarketDay = document.getElementById("nextMarketDay");
 
-// console.log("Selected market interval is ", marketInterval);
-
 // Weekdays index
-weekDaysArray = {
+var weekDaysArray = {
   1: "Sunday",
   2: "Monday",
   3: "Tuesday",
@@ -25,15 +22,10 @@ function marketDayCalculation() {
   var lastMarketDay = document.getElementById("lastMarketDay");
   var marketInterval = document.getElementById("marketInterval").value;
 
-
   var lastMarketDayNumber = lastMarketDay.value;
   var selectedLastMarketDay = lastMarketDay.options[lastMarketDay.selectedIndex].innerText;
-  let dayIndex = Number(lastMarketDayNumber) + Number(marketInterval) + 1;
+  let dayIndex = (Number(lastMarketDayNumber) + Number(marketInterval) + 1) % 7;
 
-
-
-  dayIndex = dayIndex % 7;
-  weekDaysArray[dayIndex];
   displayLastMarket.innerText =
     "The last market day selected is " + selectedLastMarketDay;
   console.log("The next market day is ", weekDaysArray[dayIndex]);
